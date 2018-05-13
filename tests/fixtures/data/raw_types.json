@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Person",
+    "keywords": "sam,mary,john,alex,smith,sarah,oliver,susan,mohammed,li,mr,mrs,father,mother,brother,son,daughter,child"
+  },
+  {
+    "name": "GeographicArea",
+    "keywords": "state,city,country,county,island,london,california,england,france"
+  },
+  {
+    "name": "Furniture",
+    "keywords": "sofa,desk,chair,stool,bed,table,cabinet"
+  },
+  {
+    "name": "Data",
+    "keywords": "figure,diagram,chart,illustration,image,table"
+  }
+]

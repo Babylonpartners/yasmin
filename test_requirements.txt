@@ -1,0 +1,7 @@
+-r requirements.txt
+wheel
+zest.releaser
+mock
+pytest
+flake8==3.5.0
+pytest-logger==0.3.0
