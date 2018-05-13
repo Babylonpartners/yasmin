@@ -19,4 +19,4 @@ jobs:
       - run:
           name: Testing
           command: |
-            python -m pytest --cov yasmin && codeclimate-test-reporter
+            python -m pytest --cov yasmin && python -m codeclimate-test-reporter
