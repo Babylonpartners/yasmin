@@ -25,5 +25,5 @@ jobs:
           name: Testing
           command: |
             ./cc-test-reporter before-build
-            python -m pytest --cov yasmin
+            python -m pytest --cov yasmin --cov-report xml
             ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
