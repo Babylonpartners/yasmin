@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/Babylonpartners/yasmin/tree/master.svg?style=svg&circle-token=cad1fd5882bff5b56bb44673067f8a7f641ef53b)](https://circleci.com/gh/Babylonpartners/yasmin/tree/master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/fe246ee26f1d4a3da9e1/maintainability)](https://codeclimate.com/repos/5af841f0b813595a630009bf/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/fe246ee26f1d4a3da9e1/test_coverage)](https://codeclimate.com/repos/5af841f0b813595a630009bf/test_coverage)
-[![PyPI version fury.io](https://badge.fury.io/py/ansicolortags.svg)](https://pypi.python.org/pypi/yasmin/)
+[![PyPI version](https://badge.fury.io/py/yasmin.svg)](https://badge.fury.io/py/yasmin)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 _Lightweight Word Sense Disambiguation_
