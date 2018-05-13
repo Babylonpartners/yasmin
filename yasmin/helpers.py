@@ -117,7 +117,7 @@ def make_type_matrix(*, model_types, model):
     return matrix
 
 
-def custom_tokenizer(nlp):
+def custom_tokenizer(nlp):  # pragma: no cover
     """
     Creates a custom spaCy tokenizer.
 

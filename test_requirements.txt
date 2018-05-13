@@ -5,3 +5,6 @@ mock
 pytest
 flake8==3.5.0
 pytest-logger==0.3.0
+coverage>=4.0,<4.4
+pytest-cov==2.5.1
+codeclimate-test-reporter==0.2.3

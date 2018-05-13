@@ -4,10 +4,11 @@ import logging
 import pytest
 import spacy
 
-from constants import TESTS_DIR
+from .constants import TESTS_DIR
 from yasmin.exceptions import ValidationException
 from yasmin.helpers import (
-    custom_tokenizer, hash_types, validate_types, parse_custom_types
+    custom_tokenizer, hash_types, validate_types, parse_custom_types,
+    make_type_matrix
 )
 from yasmin.constants import SPACY_MODEL_NAME
 
@@ -58,3 +59,10 @@ def test_custom_tokeniser():
     assert str(tokens[0]) == '"'
     assert str(tokens[1]) == 'test'
     assert str(tokens[2]) == '?'
+
+
+def test_make_type_matrix(mini_model, mini_model_types, mini_type_matrix):
+    matrix = make_type_matrix(model_types=mini_model_types, model=mini_model)
+    assert len(mini_type_matrix) == len(matrix)
+    for name, vector in mini_type_matrix.items():
+        assert all(vector == matrix[name])

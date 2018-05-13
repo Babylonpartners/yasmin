@@ -1,6 +1,10 @@
 # ignore text8 model
 tests/fixtures/data/text8.model
 
+# coverage reports
+coverage.xml
+coverage_html_report/
+
 # ignore  python bytecode files anywhere in the tree
 *.pyc
 

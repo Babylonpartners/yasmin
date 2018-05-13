@@ -1,5 +1,6 @@
-import logging
 import json
+import logging
+import mock
 import os
 import pytest
 
@@ -10,7 +11,7 @@ import spacy
 from yasmin import WSD
 from yasmin.constants import SPACY_MODEL_NAME
 from yasmin.helpers import hash_types, make_type_matrix
-from constants import TESTS_DIR, MODEL_FILE
+from .constants import TESTS_DIR, MODEL_FILE
 
 
 def pytest_logger_config(logger_config):
@@ -70,3 +71,25 @@ def raw_types():
 @pytest.fixture
 def types():
     return _types
+
+
+@pytest.fixture(scope='session')
+def mini_model():
+    model_ = mock.Mock()
+    model_.wv = mock.Mock()
+    model_.wv.vocab = {}
+    for i, term in enumerate(['term1', 'term2', 'term3']):
+        word = mock.Mock()
+        word.index = i
+        model_.wv.vocab[term] = word
+    return model_
+
+
+@pytest.fixture(scope='session')
+def mini_model_types():
+    return {'type1': ['term1'], 'type2': ['term2']}
+
+
+@pytest.fixture(scope='session')
+def mini_type_matrix():
+    return {'type1': [1, 0, 0], 'type2': [0, 1, 0]}
