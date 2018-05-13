@@ -4,7 +4,7 @@ import logging
 import pytest
 import spacy
 
-from constants import TESTS_DIR
+from .constants import TESTS_DIR
 from yasmin.exceptions import ValidationException
 from yasmin.helpers import (
     custom_tokenizer, hash_types, validate_types, parse_custom_types

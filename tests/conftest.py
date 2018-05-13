@@ -10,7 +10,7 @@ import spacy
 from yasmin import WSD
 from yasmin.constants import SPACY_MODEL_NAME
 from yasmin.helpers import hash_types, make_type_matrix
-from constants import TESTS_DIR, MODEL_FILE
+from .constants import TESTS_DIR, MODEL_FILE
 
 
 def pytest_logger_config(logger_config):
