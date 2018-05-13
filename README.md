@@ -24,6 +24,13 @@ You can also checkout this repository and install from the root folder
 $ pip install .
 ```
 
+Note: make sure you download the `en_core_web_sm` spaCy model.
+
+```bash
+$ spacy download en_core_web_sm
+```
+
+
 ### Examples
 
 Check out a usage example based on the `text8` corpus in [examples/text8.py](https://github.com/Babylonpartners/yasmin/blob/master/examples/text8.py). 
