@@ -8,6 +8,11 @@ jobs:
       - checkout
       - run: echo "$CIRCLE_SHA1" > .commit-id
       - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
           name: Install requirements
           command: |
             pip install --user -r test_requirements.txt
@@ -19,4 +24,6 @@ jobs:
       - run:
           name: Testing
           command: |
+            ./cc-test-reporter before-build
             python -m pytest --cov yasmin && python -m codeclimate_test_reporter
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
