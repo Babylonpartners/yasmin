@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Install requirements
           command: |
-            pip install --user -r requirements.txt
+            pip install --user -r test_requirements.txt
             pip install --user -r model_requirements.txt
       - run:
           name: Linting
@@ -19,5 +19,4 @@ jobs:
       - run:
           name: Testing
           command: |
-            pip install --user -r test_requirements.txt
             python -m pytest --cov yasmin && codeclimate-test-reporter
