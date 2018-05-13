@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/yasmin
+    docker:
+      - image: circleci/python:3.6.4
+    steps:
+      - checkout
+      - run: echo "$CIRCLE_SHA1" > .commit-id
+      - run:
+          name: Install requirements
+          command: |
+            pip install --user -r test_requirements.txt
+            pip install --user -r model_requirements.txt
+      - run:
+          name: Linting
+          command: |
+            python -m flake8 pyape
+      - run:
+          name: Testing
+          command: |
+            python -m pytest

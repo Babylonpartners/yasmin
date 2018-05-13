@@ -1,0 +1,18 @@
+{
+  "Person" : [
+    "sam","mary","john","alex","smith",
+    "sarah","oliver","susan","mohammed","li",
+    "mr","mrs","father",
+    "mother","brother","son","daughter","child"
+  ],
+  "GeographicArea": [
+    "state", "city", "country", "county", "island", "london",
+    "california", "england", "france"
+  ],
+  "Furniture": [
+    "sofa", "desk", "chair", "stool", "bed", "table", "cabinet"
+  ],
+  "Data": [
+    "figure", "diagram", "chart", "illustration", "image", "table"
+  ]
+}
